@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Custom="http://schemas.awesomium.com/winfx" xmlns:Core="clr-namespace:Awesomium.Core;assembly=Awesomium.Core" x:Class="TestUI.MainWindow"
+        Title="MainWindow" Height="325" Width="525" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Border BorderBrush="Black" BorderThickness="3">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="black" PreviewMouseDown="StackPanel_PreviewMouseDown">
+                <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,0,0,0" Foreground="LimeGreen" FontWeight="Bold" FontFamily="Segoe UI" Content="AWESOMIUM LOGIN EXAMPLE"/>
+                <Border VerticalAlignment="Center" HorizontalAlignment="Right" Width="15" Height="15" Margin="0,0,10,0" Background="Red" x:Name="ExitButton" PreviewMouseDown="ExitButton_PreviewMouseDown">
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10" Foreground="Black" FontWeight="Bold" FontFamily="Snap ITC"><Run Text="X"/></TextBlock>
+                </Border>
+            </Grid>
+            <Custom:WebControl Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" x:Name="MainWebUI"/>
+        </Grid>
+    </Border>
+</Window>

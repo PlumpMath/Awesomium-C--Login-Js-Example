@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Simple UI Test</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="LoginRow">
+            <div class="col-md-12">
+                <form class="form-horizontal" action="#" method="post" onsubmit="login()" name="loginform">
+                    <fieldset>
+                        <legend>Enter Login Information</legend>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="emailInput">Email</label>
+                            <div class="col-md-4">
+                                <input id="emailInput" name="email" placeholder="Email" type="text" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="passwordInput">Password</label>
+                            <div class="col-md-4">
+                                <input id="passwordInput" name="password" placeholder="Password" type="password" class="form-control input-md">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button name="commit" type="submit" value="Sign in" class="btn btn-primary pull-right">Sign In</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            app.login(document.forms['loginform']['email'].value, document.forms['loginform']['password'].value);
+        }
+    </script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
